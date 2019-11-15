@@ -1,24 +1,24 @@
-# conversor-moedas
+# Conversor de moedas (VUE.js)
+---
 
-## Project setup
+## Sobre
+Conversor de moeda simples consumindo uma api.
+
+## Passos para roder o projeto
+
+### Clonar o projeto
 ```
-npm install
+$ git clone projetoClonado
+```
+
+### Rodar o projeto
+```
+$ cd projetoClonado
+$ npm install
+$ npm run serve
 ```
 
 ### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
