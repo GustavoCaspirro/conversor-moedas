@@ -11,7 +11,7 @@ Para usar a API, utilizamos o endereço:
 
 Onde "de_para" é o tipo de moeda, exemplo: BRL_USD
 
-## Passos para roder o projeto
+## Passos para rodar o projeto
 
 ### Clonar o projeto
 ```
