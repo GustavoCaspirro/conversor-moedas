@@ -20,4 +20,8 @@
 </template>
 
 <script src="./conversor.component.js"></script>
-<style src="./conversor.component.scss" scoped lang="scss"></style>
+<style
+    src="./conversor.component.scss"
+    scoped
+    lang="scss"
+></style>

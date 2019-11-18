@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import Header from './layout/Header';
+import Header from './layout/header/Header';
 import Conversor from './components/conversor/Conversor';
-import Footer from './layout/Footer';
+import Footer from './layout/footer/Footer';
 
 export default {
   name: 'app',
