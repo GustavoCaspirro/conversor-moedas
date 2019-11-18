@@ -1,23 +1,34 @@
 <template>
   <div id="app">
-    <h1 class="title"> Conversor de Moedas </h1>
-    <div class="wrapper">
-      <Conversor
-        v-for="moeda in moedas"
-        :key="moeda.id"
-        :moeda-a="moeda.a"
-        :moeda-b="moeda.b"
-      />
-    </div>
+    <Header />
+
+    <section class="conversor-moedas">
+      <h1 class="title"> Conversor de Moedas </h1>
+      <div class="wrapper">
+        <Conversor
+          v-for="moeda in moedas"
+          :key="moeda.id"
+          :moeda-a="moeda.a"
+          :moeda-b="moeda.b"
+        />
+      </div>
+    </section>
+
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from './layout/Header';
 import Conversor from './components/Conversor';
+import Footer from './layout/Footer';
+
 export default {
   name: 'app',
   components: {
-    Conversor
+    Header,
+    Conversor,
+    Footer,
   },
   data() {
     return {
@@ -44,17 +55,25 @@ export default {
 </script>
 
 <style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+  }
+
+  .conversor-moedas {
+    padding: 50px 10px;
   }
 
   .title {
-    margin-bottom: 60px;
+    margin: 0 0 60px;
   }
 
   .wrapper {
