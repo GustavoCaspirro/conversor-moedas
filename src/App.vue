@@ -20,7 +20,7 @@
 
 <script>
 import Header from './layout/Header';
-import Conversor from './components/Conversor';
+import Conversor from './components/conversor/Conversor';
 import Footer from './layout/Footer';
 
 export default {

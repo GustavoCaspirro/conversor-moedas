@@ -1,25 +1,3 @@
-<template>
-    <section class="conversor">
-        <h2>
-            {{ moedaA }} para {{ moedaB }}
-        </h2>
-        <input
-            type="text"
-            v-model="moedaA_value"
-            :placeholder="moedaA"
-        />
-        <input
-            type="button"
-            value="Converter"
-            v-on:click="converter"
-        />
-        <h2>
-            {{ moedaB_value }}
-        </h2>
-    </section>
-</template>
-
-<script>
 export default {
     name: "Conversor",
     props: [
@@ -51,15 +29,3 @@ export default {
         }
     }
 }
-</script>
-
-<style scoped>
-    .conversor {
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        box-sizing: border-box;
-        margin: 0 auto 10px;
-        max-width: 1200px;
-        padding: 20px;
-    }
-</style>
