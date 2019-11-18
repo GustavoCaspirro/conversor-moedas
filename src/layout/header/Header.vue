@@ -2,7 +2,8 @@
     <header>
         <div class="wrapper">
             <img
-                src="#"
+                class="logo"
+                src="../../assets/logo.png"
                 alt="Logo"
             />
             <Nav />

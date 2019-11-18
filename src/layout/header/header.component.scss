@@ -2,12 +2,26 @@ header {
     box-shadow: 0 0 6px rgba(0, 0, 0 , .1);
     background: #007037;
     color: #fff;
+    padding: 0 10px;
+
+    @media screen and (min-width: 768px) {
+        padding: 0;
+    }
 }
 
 .wrapper {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1200px;
+    @media screen and (min-width: 768px) {
+        flex-wrap: nowrap;
+    }
+}
+
+.logo {
+    padding: 10px 0;
+    width: 50px;
 }
