@@ -12,8 +12,14 @@
         type="button"
         value="Converter"
         v-on:click="converter"
+        :disabled="showLoading"
     />
-    <h2>
+    
+    <h2 v-if="showLoading">
+        Loading...
+    </h2>
+
+    <h2 v-if="!showLoading">
         {{ moedaB_value }}
     </h2>
 </section>
