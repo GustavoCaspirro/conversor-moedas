@@ -13,6 +13,25 @@ Onde "de_para" é o tipo de moeda, exemplo: BRL_USD
 
 ## Passos para rodar o projeto
 
+### Verificar se possue node, npm e vue instalados.
+```sh
+// Para verificar versão do Node.
+$ node -v
+// Para verificar versão do NPM.
+$ npm -v
+// Para verificar versão do NPM.
+$ vue --version
+```
+
+### Caso não tenha o node instalado
+- Acesse [node.js](https://nodejs.org/en/) e baixe a versão mais recente, por padrão o npm já será instalado.
+
+### Caso não tenha o vue instalado
+- Digite o comando abaixo para instalar
+```sh
+$ npm install vue.
+```
+
 ### Clonar o projeto
 ```
 $ git clone projetoClonado
