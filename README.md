@@ -1,7 +1,7 @@
 # Conversor de moedas (VUE.js)
 
 ## Sobre
-Conversor de moeda simples.
+Conversor de moeda simples utilizando vue.js.
 
 ### Endereço da API
 
