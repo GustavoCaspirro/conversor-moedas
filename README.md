@@ -24,3 +24,11 @@ $ cd projetoClonado
 $ npm install
 $ npm run serve
 ```
+
+# Versão
+1.0.0
+
+# Autores 
+
+* **Gustavo Caspirro** - [Gustavo Caspirro](https://github.com/GustavoCaspirro)
+* **Ricardo Santana** - [Ricardo Santana Lopes](https://github.com/RicardoSLopes)
