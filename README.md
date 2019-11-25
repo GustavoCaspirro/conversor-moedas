@@ -14,12 +14,19 @@ Onde "de_para" é o tipo de moeda, exemplo: BRL_USD
 ## Passos para rodar o projeto
 
 ### Verificar se possue node, npm e vue instalados.
+
+- Versão do Node
 ```sh
-// Para verificar versão do Node.
 $ node -v
-// Para verificar versão do NPM.
+```
+
+- Versão NPM
+```sh
 $ npm -v
-// Para verificar versão do NPM.
+```
+
+- Versão Vue.js
+```sh
 $ vue --version
 ```
 
