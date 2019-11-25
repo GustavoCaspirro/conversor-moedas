@@ -1,7 +1,7 @@
 # Conversor de moedas (VUE.js)
 
 ## Sobre
-Conversor de moeda simples.
+Conversor de moeda simples utilizando vue.js.
 
 ### Endereço da API
 
@@ -12,6 +12,25 @@ Para usar a API, utilizamos o endereço:
 Onde "de_para" é o tipo de moeda, exemplo: BRL_USD
 
 ## Passos para rodar o projeto
+
+### Verificar se possue node, npm e vue instalados.
+```sh
+// Para verificar versão do Node.
+$ node -v
+// Para verificar versão do NPM.
+$ npm -v
+// Para verificar versão do NPM.
+$ vue --version
+```
+
+### Caso não tenha o node instalado
+- Acesse [node.js](https://nodejs.org/en/) e baixe a versão mais recente, por padrão o npm já será instalado.
+
+### Caso não tenha o vue instalado
+- Digite o comando abaixo para instalar
+```sh
+$ npm install vue.
+```
 
 ### Clonar o projeto
 ```
@@ -24,3 +43,11 @@ $ cd projetoClonado
 $ npm install
 $ npm run serve
 ```
+
+# Versão
+1.0.0
+
+# Autores 
+
+* **Gustavo Caspirro** - [Gustavo Caspirro](https://github.com/GustavoCaspirro)
+* **Ricardo Santana** - [Ricardo Santana Lopes](https://github.com/RicardoSLopes)
