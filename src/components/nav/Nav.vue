@@ -6,7 +6,7 @@
                 v-for="item in itemsMenu"
                 :key="item.id"
             >
-                <a :href="item.route">
+                <a :href="`#${item.route}`" :title="item.name">
                     {{ item.name }}
                 </a>
             </li>

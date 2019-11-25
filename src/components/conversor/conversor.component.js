@@ -1,12 +1,12 @@
 export default {
-    name: "Conversor",
+    name: 'Conversor',
     props: [
-        "moedaA",
-        "moedaB"
+        'moedaA',
+        'moedaB'
     ],
     data() {
         return {
-            moedaA_value: "",
+            moedaA_value: '',
             moedaB_value: 0,
             showLoading: false
         };

@@ -1,7 +1,32 @@
 import Vue from 'vue';
+import VueRouter from 'vue-router';
 import App from './App.vue';
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app');
+import Home from './pages/home/Home.vue';
+import Currency from './pages/currency/Currency.vue';
 
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+  routes: [
+    {
+      path: '/',
+      component: Home,
+    },
+    {
+      path: '/home',
+      component: Home,
+    },
+    {
+      path: '/conversor',
+      component: Currency,
+    },
+  ],
+});
+
+Vue.config.productionTip = false;
+
+new Vue({
+  router,
+  render: (h) => h(App),
+}).$mount('#app');

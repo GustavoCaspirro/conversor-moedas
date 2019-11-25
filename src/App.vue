@@ -3,14 +3,8 @@
     <Header />
 
     <section class="conversor-moedas">
-      <h1 class="title"> Conversor de Moedas </h1>
-      <div class="wrapper">
-        <Conversor
-          v-for="moeda in moedas"
-          :key="moeda.id"
-          :moeda-a="moeda.a"
-          :moeda-b="moeda.b"
-        />
+      <div>
+        <router-view></router-view>
       </div>
     </section>
 
@@ -19,37 +13,14 @@
 </template>
 
 <script>
-import Header from './layout/header/Header';
-import Conversor from './components/conversor/Conversor';
-import Footer from './layout/footer/Footer';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 export default {
   name: 'app',
   components: {
     Header,
-    Conversor,
     Footer,
-  },
-  data() {
-    return {
-      moedas: [
-        {
-          id: 0,
-          a: "BRL",
-          b: "USD"
-        },
-        {
-          id: 1,
-          a: "BRL",
-          b: "AUD"
-        },
-        {
-          id: 2,
-          a: "BRL",
-          b: "EUR"
-        }
-      ]
-    }
   }
 }
 </script>
