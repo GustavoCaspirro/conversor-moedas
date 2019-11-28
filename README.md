@@ -36,7 +36,7 @@ $ vue --version
 ### Caso não tenha o vue instalado
 - Digite o comando abaixo para instalar
 ```sh
-$ npm install vue
+$ npm install vue.
 ```
 
 ### Clonar o projeto
