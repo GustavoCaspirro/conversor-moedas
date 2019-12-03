@@ -7,9 +7,9 @@ Conversor de moeda simples utilizando vue.js.
 
 Para usar a API, utilizamos o endereço:
 
-`https://free.currconv.com/api/v7/convert?apiKey=sample-key-do-not-use&q=[de_para]&compact=y`
+`https://economia.awesomeapi.com.br/all/[moedaB]-BRL`
 
-Onde "de_para" é o tipo de moeda, exemplo: BRL_USD
+Onde "moedaB" é o tipo de moeda, exemplo: USD
 
 ## Passos para rodar o projeto
 
