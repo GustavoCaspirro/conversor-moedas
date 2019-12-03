@@ -4,6 +4,7 @@ import App from './App.vue';
 
 import Home from './pages/home/Home.vue';
 import Currency from './pages/currency/Currency.vue';
+import About from './pages/about/About.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const router = new VueRouter({
       path: '/conversor',
       component: Currency,
     },
+    {
+      path: '/sobre',
+      component: About,
+    },
+
   ],
 });
 
