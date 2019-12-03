@@ -1,17 +1,4 @@
-<template>
-    <nav class="menu">
-        <ul class="menu__items">
-            <li
-                class="menu__items_item"
-                v-for="item in itemsMenu"
-                :key="item.id"
-            >
-                <a :href="`#${item.route}`" :title="item.name">
-                    {{ item.name }}
-                </a>
-            </li>
-        </ul>
-    </nav>
+<template src="./nav.component.html">
 </template>
 
 <script src="./nav.component.js"></script>

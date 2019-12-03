@@ -3,7 +3,7 @@ import Conversor from '../../components/conversor/Conversor';
 export default {
     name: 'Currency',
     components: {
-        Conversor,
+        "cm-conversor": Conversor,
     },
     data() {
         return {

@@ -1,7 +1,4 @@
-<template>
-    <div>
-        <h1>Home</h1>
-    </div>
+<template src="./home.component.html">
 </template>
 
 <script src="./home.component.js"></script>

@@ -1,3 +1,4 @@
+import axios from "axios";
 export default {
     name: 'Conversor',
     props: [
@@ -12,23 +13,20 @@ export default {
         };
     },
     methods: {
-        converter(){
+        converter(){    
             this.showLoading = true;
-            let de_para = `${this.moedaA}_${this.moedaB}`;
-            let urlApi = `https://free.currconv.com/api/v7/convert?apiKey=sample-key-do-not-use&q=${de_para}&compact=y`;
-
-            fetch(urlApi).then(resp => {
-                return resp.json();
+            axios
+                .get(`https://economia.awesomeapi.com.br/all/${this.moedaB}-BRL`)
+                
+                .then(json => {
+                    this.showLoading = false;
+                    let value = this.moedaB;
+                    let cotacao = (json.data[value].ask).toString().replace(",",".");
+                    this.moedaB_value = (parseFloat(this.moedaA_value.toString().replace(",",".")) / cotacao).toFixed(2);
                 })
                 .catch(error => {
                     this.showLoading = false;
-                    // eslint-disable-next-line no-console
                     console.log('There has been a problem with your fetch operation: ' + error.message);
-                })
-                .then(json => {
-                    this.showLoading = false;
-                    let cotacao = json[de_para].val;
-                    this.moedaB_value = (cotacao * parseFloat(this.moedaA_value)).toFixed(2);
                 });
         }
     }

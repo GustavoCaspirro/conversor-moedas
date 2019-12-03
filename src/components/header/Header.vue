@@ -1,14 +1,4 @@
-<template>
-    <header>
-        <div class="wrapper">
-            <img
-                class="logo"
-                src="../../assets/logo.png"
-                alt="Logo"
-            />
-            <Nav />
-        </div>
-    </header>    
+<template src="./header.component.html">   
 </template>
 
 <script src="./header.component.js"></script>
