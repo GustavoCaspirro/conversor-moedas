@@ -1,7 +1,10 @@
 <section class="conversor">
-<h2>
-    {{ moedaA }} para {{ moedaB }}
-</h2>
+<h3>
+    BRL para 
+    <select id="select-id">
+        <option v-for="currency in currencies">{{ currency.code }} - {{ currency.name }} </option>
+    </select>
+</h3>
 <input
     type="number"
     v-model="moedaA_value"
@@ -10,7 +13,7 @@
 <input
     type="button"
     value="Converter"
-    @click="converter()"
+    @click="converter($event)"
     :disabled="showLoading"
 />
 
