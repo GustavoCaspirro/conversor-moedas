@@ -21,12 +21,12 @@ export default {
   methods: {
     converter(eventButton) {
       this.showLoading = true;
-      let currenciesLocalStorage = JSON.parse(localStorage.getItem('currencies'));
+      let currenciesSessionStorage = JSON.parse(sessionStorage.getItem('currencies'));
       var currentCurrency = eventButton.target.parentElement.childNodes[0].childNodes[1].value.split('-')[0].trim();
 
-      if (currenciesLocalStorage) {
+      if (currenciesSessionStorage) {
         this.showLoading = false;
-        let cotacao = (currenciesLocalStorage[currentCurrency].ask).toString().replace(",", ".");
+        let cotacao = (currenciesSessionStorage[currentCurrency].ask).toString().replace(",", ".");
         this.moedaB_value = (parseFloat(this.moedaA_value.toString().replace(",", ".")) / cotacao).toFixed(2);
       } else {
         axios
@@ -45,17 +45,17 @@ export default {
     },
 
     initializeMoedas() {
-      let currenciesLocalStorage = localStorage.getItem('currencies');
+      let currenciesSessionStorage = sessionStorage.getItem('currencies');
 
-      if (currenciesLocalStorage) {
-        this.currencies = JSON.parse(currenciesLocalStorage);
+      if (currenciesSessionStorage) {
+        this.currencies = JSON.parse(currenciesSessionStorage);
       } else {
         axios
           .get(`https://economia.awesomeapi.com.br/all`)
           .then(json => {
             this.currencies = json.data;
             const currenciesStringify = JSON.stringify(json.data);
-            localStorage.setItem('currencies', currenciesStringify);
+            sessionStorage.setItem('currencies', currenciesStringify);
           })
           .catch(error => {
             console.log('There has been a problem with your fetch operation: ' + error.message);
