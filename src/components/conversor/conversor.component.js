@@ -27,7 +27,11 @@ export default {
       if (currenciesSessionStorage) {
         this.showLoading = false;
         let cotacao = (currenciesSessionStorage[currentCurrency].ask).toString().replace(",", ".");
-        this.moedaB_value = (parseFloat(this.moedaA_value.toString().replace(",", ".")) / cotacao).toFixed(2);
+        if (!this.moedaA_value){
+          this.moedaB_value = 0;
+        }else{
+          this.moedaB_value = (parseFloat(this.moedaA_value.toString().replace(",", ".")) / cotacao).toFixed(2);
+        }  
       } else {
         axios
           .get(`https://economia.awesomeapi.com.br/all/${currentCurrency}-BRL`)
@@ -35,7 +39,12 @@ export default {
             this.showLoading = false;
             let value = currentCurrency;
             let cotacao = (json.data[value].ask).toString().replace(",", ".");
-            this.moedaB_value = (parseFloat(this.moedaA_value.toString().replace(",", ".")) / cotacao).toFixed(2);
+            if (!this.moedaA_value){
+              this.moedaB_value = 0;
+            }else{
+              this.moedaB_value = (parseFloat(this.moedaA_value.toString().replace(",", ".")) / cotacao).toFixed(2);
+            }
+            
           })
           .catch(error => {
             this.showLoading = false;
@@ -61,6 +70,14 @@ export default {
             console.log('There has been a problem with your fetch operation: ' + error.message);
           });
       }
+    },
+      checkInput($event) {
+        if ($event.charCode === 0 || /^[\d,.]+$/.test($event.key)) {
+            return true
+        } else {
+            $event.preventDefault();
+        }
     }
   }
+
 }
